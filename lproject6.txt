@@ -1,0 +1,18 @@
+#!/bin/bash
+# declare an array called array and define 3 vales
+
+read range
+array=()
+
+for (( i=1; i<=$range; i++ )); do
+	array+=($i)
+done
+
+for (( i=0; i<$range; i++ )); do
+	if [ $((${array[$i]}%3)) -eq 0 ]; then
+		echo "${array[$i]} Fizz"
+	elif [ $((${array[$i]}%5)) -eq 0 ]; then
+		echo "${array[$i]} Buzz"
+	fi
+done
+
