@@ -1,0 +1,24 @@
+#! /bin/bash
+echo "Type the input integer, followed by [Enter]:"
+read i
+ if (( $i % 2 )); then
+	 echo $i is odd >> file3
+ else
+	 echo $i is even >> file3
+ fi
+
+
+ echo "Do you want to delete the file (1=y/0=n):"
+ read x
+ if (( $x == 1)); then
+	 rm -f file3
+ else
+	 echo "3 is odd" >> file3
+ fi
+ mv file3 changedFileName
+ mv changedFileName ~
+
+
+
+
+

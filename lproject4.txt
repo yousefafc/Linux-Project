@@ -1,0 +1,7 @@
+#script that lists active processes
+#!/bin/bash
+ps -U root -u root -N
+echo "process ID:"
+read i
+kill $i
+

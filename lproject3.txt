@@ -1,0 +1,12 @@
+#! /bin/bash
+# Script that prints user group as well as groups you are part of.
+
+echo "Prints uid of current user + groups that itsa  member of"
+u=$(whoami)
+echo
+
+getent passwd | grep $u
+echo
+echo "user id is $(id -u $u)"
+echo
+getent group | grep $u
