@@ -1,10 +1,10 @@
 #! /bin/bash
-mkdir QAC-Yousef
+mkdir -p QAC-Yousef
 cd QAC-Yousef
 touch file1
 touch file2
 touch file3
 echo 123456 > file1
 
-mkdir childDir
+mkdir -p childDir
 cp file1 childDir
